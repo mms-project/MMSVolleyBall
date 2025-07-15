@@ -146,7 +146,8 @@ export default {
           submenu: [
             { title: '예매 내역', path: '/myPage/reservations' }, 
             { title: '나의 멤버십', path: '/myPage/membership' }, 
-            { title: '나의 정보 수정', path: '/myPage/edit-profile' }, 
+            { title: '충전 내역', path: '/myPage/payment' }, 
+            { title: '나의 정보', path: '/myPage/edit-profile' }, 
           ] 
         }
       ],
@@ -176,24 +177,22 @@ export default {
     },
     goToAdminPage(){
       const token = sessionStorage.getItem('token');
-  if (token) {
-    axios.get('http://localhost:4000/admin', {
-      headers: {
-        Authorization: `Bearer ${token}`
+      if (token) {
+        axios.get('http://localhost:4000/admin')
+        .then(response => {
+          // 인증이 성공하면 관리자 페이지로 리다이렉트
+          if(response){
+            window.location.href = 'http://localhost:4000/admin/userList';
+          }
+        }).catch(error => {
+            alert('접근이 거부되었거나 세션이 만료되었습니다.');
+            console.error('접근이 거부되었거나 세션이 만료되었습니다.', error);
+        });
+      } else {
+        alert('토큰이 없습니다. 다시 로그인하세요.');
+        console.warn('토큰이 없습니다. 다시 로그인하세요.');
+        this.$router.push('/login');
       }
-    })
-    .then(response => {
-      // 인증이 성공하면 관리자 페이지로 리다이렉트
-      window.location.href = 'http://localhost:4000/admin/userList';
-    })
-    .catch(error => {
-      console.error('접근이 거부되었거나 세션이 만료되었습니다.', error);
-      // 필요에 따라 로그인 페이지로 이동하거나 오류 메시지를 표시
-    });
-  } else {
-    // 토큰이 없을 경우 로그인 페이지로 이동하거나 알림 표시
-    console.warn('토큰이 없습니다. 다시 로그인하세요.');
-  }
     },
     toggleMenu() {
       this.isMenuOpen = !this.isMenuOpen;

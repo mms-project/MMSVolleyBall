@@ -158,8 +158,23 @@ export default {
       this.$router.push('/signup');
     },
     goToAdminPage(){
-      const targetUrl = `http://localhost:4000/admin/userList`;
-      window.location.href = targetUrl;
+      const token = sessionStorage.getItem('token');
+      if (token) {
+        axios.get('http://localhost:4000/admin')
+        .then(response => {
+          // 인증이 성공하면 관리자 페이지로 리다이렉트
+          if(response){
+            window.location.href = 'http://localhost:4000/admin/userList';
+          }
+        }).catch(error => {
+            alert('접근이 거부되었거나 세션이 만료되었습니다.');
+            console.error('접근이 거부되었거나 세션이 만료되었습니다.', error);
+        });
+      } else {
+        alert('토큰이 없습니다. 다시 로그인하세요.');
+        console.warn('토큰이 없습니다. 다시 로그인하세요.');
+        this.$router.push('/login');
+      }
     },
     // 로그아웃
     logout() {

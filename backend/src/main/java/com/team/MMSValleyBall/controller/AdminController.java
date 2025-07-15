@@ -1,5 +1,6 @@
 package com.team.MMSValleyBall.controller;
 
+import com.team.MMSValleyBall.dto.CustomUserDetails;
 import com.team.MMSValleyBall.dto.MatchPaymentDTO;
 import com.team.MMSValleyBall.dto.UserDTO;
 import com.team.MMSValleyBall.entity.Users;
@@ -15,6 +16,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -41,6 +45,18 @@ public class AdminController {
         this.mainService = mainService;
         this.usersBalanceService = usersBalanceService;
         this.userRepository = userRepository;
+    }
+
+    @GetMapping("/")
+    public ResponseEntity<Boolean> checkedRole() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
+        String role = userDetails.getAuthorities().iterator().next().getAuthority();
+        System.out.println(role);
+        if(role.equals("ADMIN")){
+            return ResponseEntity.ok(true);
+        }
+        return ResponseEntity.badRequest().body(false);
     }
 
     @GetMapping("/userList")

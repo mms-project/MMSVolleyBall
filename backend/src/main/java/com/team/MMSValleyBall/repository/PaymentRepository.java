@@ -1,6 +1,7 @@
 package com.team.MMSValleyBall.repository;
 
 import com.team.MMSValleyBall.entity.Payment;
+import com.team.MMSValleyBall.entity.Users;
 import com.team.MMSValleyBall.enums.PaymentStatus;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
@@ -20,4 +21,6 @@ public interface PaymentRepository extends JpaRepository<Payment, Long> {
             "GROUP BY p.paymentCreateAt, EXTRACT(MONTH FROM p.paymentCreateAt) " +
             "ORDER BY month ASC")
     List<Object[]> findMonthlySalesNative();
+
+    List<Payment> findByPaymentUser(Users user);
 }

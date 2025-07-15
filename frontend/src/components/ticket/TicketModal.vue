@@ -13,16 +13,13 @@
                 </div>
                 <hr class="divider" />
             </div>
-            <!-- 모달 디테일 -->
             <div v-if="firstPage">
                 <div class="modal-body">
-                    <!-- 모달 이미지 -->
                     <div class="modal-ticket-img" v-if="selectedZoneImage">
                         <img :src="selectedZoneImage" alt="선택한 구역 이미지" class="stadium-image" />
                     </div>
-                    <!-- 모달 표 -->
-                    <div class="modal-table-container">
-                        <table class="modal-table">
+                    <div class="section-table-container">
+                        <table class="section-table">
                             <thead class="table-theader">
                                 <tr>
                                     <th>구역</th>
@@ -31,13 +28,13 @@
                             </thead>
                             <tbody v-for="zone in filteredAvailableSeats" :key="zone.zoneName">
                                 <tr>
-                                    <td>
+                                    <td class="section-color">
                                         <button class="select-zone-btn" @click="toggleZoneSelection(zone)"
                                         :style="{ backgroundColor: getButtonColor(zone.zoneName) }">
                                             {{ zone.zoneName }}
                                         </button>
                                     </td>
-                                    <td>{{ zone.availableSeatAmount }}석</td>
+                                    <td class="seat-amount">{{ zone.availableSeatAmount }}석</td>
                                 </tr>
 
                                 <!-- 선택한 구역의 섹션 정보 표시 -->
@@ -540,7 +537,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 1000
+    z-index: 1000;
 }
 
 .first-modal-content {
@@ -550,9 +547,21 @@ export default {
     max-width: 1000px; /* 모달 창 너비 줄임 */
     max-height: 800px; /* 모달 창 높이 줄임 */
     width: 1000px; /* 모달 창 너비 줄임 */
-    height: 800px; /* 모달 창 높이 줄임 */
+    height: 750px; /* 모달 창 높이 줄임 */
     position: relative;
-    overflow-y: auto; /* 세로 스크롤 추가 */
+}
+.section-table-container{
+    margin-left: -8%;
+    width: 50%;
+    height: 400px;
+    overflow-y: auto;
+}
+.section-table{
+    width: 95%;
+}
+.section-table tr td{
+    padding: 5px ;
+    width: 80px;
 }
 
 .second-modal-content {
@@ -610,7 +619,7 @@ export default {
 .modal-body {
     display: flex;
     /* 이미지와 표를 옆으로 나란히 배치 */
-    align-items: flex-start;
+    align-items: center;
     /* 이미지와 표의 상단을 맞추기 */
 }
 
@@ -641,6 +650,8 @@ export default {
     border-collapse: collapse;
     width: 400px; /* 테이블 너비 줄임 */
     table-layout: fixed;
+    max-height: 600px;
+    overflow-y: auto;
     /* 테이블 레이아웃을 고정(fixed)으로 설정 */
 }
 
@@ -935,13 +946,14 @@ border: none;
     width: 80px;
     height: 35px;
     font-size: 15px;
-    background-color: #FFBB00;
+    background-color: #FFBB00;  
     margin-bottom: 0px;
     padding: 4px 8px;
     margin: 10px;
     margin-top: -15px;
     border-radius: 10px;
     margin-left: auto;
+    margin-right: 0;
 }
 
 .notice{

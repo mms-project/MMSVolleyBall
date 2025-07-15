@@ -49,6 +49,14 @@ public class MyPageController {
         return ResponseEntity.ok(users);
     }
 
+    // 충전 내역 탭에서 받을 사용자 충전 내역
+    @GetMapping("payment")
+    public ResponseEntity<List<PaymentDTO>> userPaymentList(){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        List<PaymentDTO> userPayment = myPageService.getUserPaymentList(authentication.getName());
+        return ResponseEntity.ok(userPayment);
+    }
+
     // 나의 정보 탭에서 받을 사용자 정보
     @GetMapping("info")
     public ResponseEntity<UserDTO> userInfo(){

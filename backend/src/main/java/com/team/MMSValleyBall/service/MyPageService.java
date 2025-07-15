@@ -160,4 +160,10 @@ public class MyPageService {
         paymentRepository.save(payment);
         return "충전되었습니다.";
     }
+
+    public List<PaymentDTO> getUserPaymentList(String email) {
+        Users user = userRepository.findByUserEmail(email);
+        List<Payment> userPaymentList = paymentRepository.findByPaymentUser(user);
+        return userPaymentList.stream().map(PaymentDTO::fromEntity).toList();
+    }
 }
