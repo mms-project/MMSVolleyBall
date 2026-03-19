@@ -12,7 +12,7 @@
           <!-- 이메일 -->
           <label for="userEmail">**이메일</label>
           <div class="input-with-button">
-            <input type="email" id="userEmail" v-model="userEmail" placeholder="이메일을 입력하세요" required />
+            <input type="email" id="userEmail" v-model="userEmail" placeholder="이메일을 입력해 주세요" required />
             <button type="button" @click="checkEmail" class="check-button">중복 확인</button>
           </div>
         </div>
@@ -20,31 +20,33 @@
         <!-- 비밀번호 -->
         <div class="form-group">
           <label for="userPassword">**비밀번호</label>
-          <input type="password" id="userPassword" v-model="userPassword" required placeholder="비밀번호를 입력해주세요."/>
+          <input type="password" id="userPassword" v-model="userPassword" required placeholder="비밀번호를 입력해 주세요"/>
         </div>
 
         <div class="form-group">
           <label for="userConfirmPassword">**비밀번호 확인</label>
-          <input type="password" id="userConfirmPassword" v-model="userConfirmPassword" required placeholder="한 번 더 입력해주세요."/>
+          <input type="password" id="userConfirmPassword" v-model="userConfirmPassword" required placeholder="한 번 더 입력해 주세요"/>
         </div>
 
         <!-- 이름 -->
         <div class="form-group">
           <label for="userName">**이름</label>
-          <input type="text" id="userName" v-model="userName" required placeholder="이름을 입력해주세요." />
+          <input type="text" id="userName" v-model="userName" required placeholder="이름을 입력해 주세요" />
         </div>
 
         <!-- 핸드폰 번호 -->
         <div class="form-group">
           <label for="userPhone">**전화번호</label>
-          <div class="phone-input-group single-line">
+          <div class="phone-input-group">
             <select v-model="userPhonePart1">
               <option value="010">010</option>
               <option value="011">011</option>
               <option value="016">016</option>
               <option value="017">017</option>
-            </select> -
-            <input type="tel" v-model="userPhonePart2" maxlength="4" placeholder="0000"/> -
+            </select>
+            <span>-</span>
+            <input type="tel" v-model="userPhonePart2" maxlength="4" placeholder="0000"/>
+            <span>-</span>
             <input type="tel" v-model="userPhonePart3" maxlength="4" placeholder="0000"/>
             <button type="button" @click="checkPhone" class="check-button">인증</button>
           </div>
@@ -54,7 +56,7 @@
         <div class="form-group">
           <label for="userAddress">주소</label>
           <div class="input-with-button">
-            <input type="text" id="userAddress" v-model="userAddress" placeholder="주소를 입력하세요" readonly required />
+            <input type="text" id="userAddress" v-model="userAddress" placeholder="주소를 입력해 주세요" readonly required />
             <button type="button" @click="findAddress" class="check-button">주소 찾기</button>
           </div>
         </div>
@@ -255,7 +257,7 @@ import LogoHeader from '../common/LogoHeader.vue';
 }
 
 .signup-form {
-  max-width: 500px;
+  max-width: 400px;
   margin: 50px auto;
   padding: 20px;
   background-color: #f9f9f9;
@@ -265,7 +267,7 @@ import LogoHeader from '../common/LogoHeader.vue';
 }
 
 .signup-form h2 {
-  margin-bottom: 40px;
+  margin-bottom: 30px;
   color: #333;
   text-align: center;
   padding-bottom: 30px;
@@ -312,13 +314,32 @@ input[type="text"]:focus {
   outline: none;
 }
 
+.phone-input-group {
+  display: flex;
+  align-items: center;
+}
+
+.phone-input-group select {
+  margin-top: 10px;
+  width: 50%;
+  height: 40.67px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.phone-input-group span {
+  margin-top: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 .check-button {
   background-color: #4f8578;
   color: white;
   border: none;
   padding: 10px;
   width: 150px;
-  height: 53px;
   margin-top: 10px;
   margin-left: 10px;
   border-radius: 5px;
@@ -332,14 +353,13 @@ input[type="text"]:focus {
 .submit-button {
   margin-top: 15px;
   width: 100%;
-  height: 80px;
-  padding: 15px;
+  padding: 10px;
   background-color: #4f8578;
   color: #ffffff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 30px;
+  font-size: 18px;
 }
 
 .submit-button:hover {
@@ -355,7 +375,7 @@ input[type="text"]:focus {
 
 .notice {
   text-align: right;
-  margin-bottom: 40px;
-  font-size: 20px;
+  margin-bottom: 30px;
+  font-size: 16px;
 }
 </style>

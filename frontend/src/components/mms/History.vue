@@ -21,25 +21,25 @@
         <div class="year">
             <h3>2023</h3>
             <p><img class="icon" src="@/assets/img/mms/mms-history-volleyball-icon.png" alt="icon"> 2022-2023 V리그 정규리그 4위</p>
-            <p><img class="icon" src="@/assets/img/mms/mms-history-volleyball-icon.png" alt="icon"> 홈 경기장 리빌딩 및 'GS MMS SPIKE HI STADIUM'으로 명명</p>
+            <p><img class="icon" src="@/assets/img/mms/mms-history-volleyball-icon.png" alt="icon"> 홈경기장 리빌딩 및 'GS MMS SPIKE HI STADIUM'으로 명명</p>
         </div>
   
         <div class="year">
             <h3>2022</h3>
             <p><img class="icon" src="@/assets/img/mms/mms-history-volleyball-icon.png" alt="icon"> 2021-2022 V리그 정규리그 5위</p>
-            <p><img class="icon" src="@/assets/img/mms/mms-history-volleyball-icon.png" alt="icon"> 2022 순천 도드람컵 프로배구대회 2위</p>
+            <p><img class="icon" src="@/assets/img/mms/mms-history-volleyball-icon.png" alt="icon"> 2022 순천 도드람 컵 프로배구대회 2위</p>
         </div>
   
         <div class="year">
             <h3>2021</h3>
             <p><img class="icon" src="@/assets/img/mms/mms-history-volleyball-icon.png" alt="icon"> 2020-2021 V리그 정규리그 6위</p>
-            <p><img class="icon" src="@/assets/img/mms/mms-history-volleyball-icon.png" alt="icon"> 2021 의정부·도드람컵 프로배구대회 4위</p>
+            <p><img class="icon" src="@/assets/img/mms/mms-history-volleyball-icon.png" alt="icon"> 2021 의정부·도드람 컵 프로배구대회 4위</p>
         </div>
   
         <div class="year">
             <h3>2020</h3>
             <p><img class="icon" src="@/assets/img/mms/mms-history-volleyball-icon.png" alt="icon"> GS MMS 배구단 공식 창단</p>
-            <p><img class="icon" src="@/assets/img/mms/mms-history-volleyball-icon.png" alt="icon"> 종로체육관(현 서울 하이체육관)을 홈 구장으로 지정</p>
+            <p><img class="icon" src="@/assets/img/mms/mms-history-volleyball-icon.png" alt="icon"> 종로 체육관(현 서울 하이 체육관)을 홈구장으로 지정</p>
             <p><img class="icon" src="@/assets/img/mms/mms-history-volleyball-icon.png" alt="icon"> 첫 공식 경기 개최</p>
         </div>
     </div>

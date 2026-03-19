@@ -13,7 +13,7 @@
       <div class="membership-info-content">
         <div class="membership-info-layout">
           <div class="membership-season-info">
-            <h2>2024/25 시즌 멤버십 안내</h2>
+            <p class="sub-title">2024/25 시즌 멤버십 안내</p>
               <table class="membership-info-table">
                 <thead>
                   <tr>
@@ -28,8 +28,8 @@
                   <tr>
                     <td>GOLD</td>
                     <td>
-                        <p>골드전용 좌석 구매</p>
-                        <p>경기 7일전 선예매</p>
+                        <p>골드 전용 좌석 구매</p>
+                        <p>경기 7일 전 선예매</p>
                         <p>팀 유니폼 증정 (랜덤)</p>
                         <p>팀 굿즈(MMS 고무장갑, 슬로건) 증정</p>
                     </td>
@@ -40,7 +40,7 @@
                   <tr>
                     <td>SILVER</td>
                     <td>
-                        <p>경기 7일전 선예매</p>
+                        <p>경기 7일 전 선예매</p>
                         <p>팀 굿즈(MMS 고무장갑, 슬로건) 증정</p>
                     </td>
                     <!-- <td>2024.8.16-2025.7.31</td>
@@ -59,7 +59,7 @@
           </div>
           <br>
           <div class="membership-season-goods">
-              <h2>2024/25 시즌 굿즈 안내</h2>
+              <p class="sub-title">2024/25 시즌 굿즈 안내</p>
               <div class="goods">
                 <div class="slogan">
                   <img class="sloganImg" src="@/assets/img/mms/slogun.png">
@@ -178,6 +178,11 @@
   margin-bottom: 30px; /* 아래 여백 추가 */
 }
 
+.sub-title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
 .membership-info-table {
   width: 75%;
   text-align: center;
@@ -234,7 +239,7 @@
   /* 테두리 없음 */
   color: white;
   /* 글자 색 (흰색) */
-  padding: 8px 16px;
+  padding: 10px 30px;
   /* 버튼 내부 여백 (위아래 12px, 좌우 24px) */
   text-align: center;
   /* 글자 가운데 정렬 */
@@ -242,28 +247,21 @@
   /* 밑줄 없음 */
   display: inline-block;
   /* 기본 인라인 블록 설정 */
-  font-size: 22px;
-  /* 글자 크기 */
   border-radius: 8px;
   /* 모서리를 둥글게 */
   cursor: pointer;
   /* 마우스를 올렸을 때 포인터 모양 */
   transition: background-color 0.3s;
   /* 배경색이 바뀌는 효과 추가 */
-  margin-top: 50px;
-  margin-left: 15px;
-  margin-right: 15px;
-  margin-bottom: 50px;
-
-  width: 100px;
-  /* 버튼의 너비 */
-  height: 50px;
-  /* 버튼의 높이 */
+  margin-top: 10px;
+  margin-bottom: 30px;
 }
 
 #btn-purchase {
-  width: 140px;
-  background-color: #60a191;  /* 버튼 배경색 (녹색) */
+  background-color: #60a191;
+  font-size: 18px;
+  width: 126.25px;
+  height: 46px;
 }
 
 #btn-purchase:hover {

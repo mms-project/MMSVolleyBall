@@ -99,6 +99,10 @@ thead th {
     color: #333;
 }
 
+td a {
+    color: #6b7280;
+}
+
 tbody tr:hover {
     background-color: #f0f0f0;
 }

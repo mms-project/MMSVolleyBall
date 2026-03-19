@@ -558,6 +558,7 @@ export default {
 .second-modal-content {
     background: white;
     padding: 20px;
+    padding-bottom: 0px;
     border-radius: 10px;
     max-width: 1000px;
     max-height: 800px;
@@ -848,28 +849,28 @@ export default {
 
 /* 다음 버튼 */
 .buy-button {
-    background-color: red;
+    background-color: #60a191;;
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
-    height: 50px;
+    /* height: 50px; */
     width: 120px;
     margin: 10px;
 }
 
 /* 닫기 버튼 */
 .close-button {
-    background-color: black;
+    background-color: #cccccc;
     color: white;
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     font-size: 16px;
-    height: 50px;
+    /* height: 50px; */
     width: 120px;
     margin: 10px;
 }
@@ -942,6 +943,7 @@ border: none;
     margin-top: -15px;
     border-radius: 10px;
     margin-left: auto;
+    margin-right: 0px;
 }
 
 .notice{

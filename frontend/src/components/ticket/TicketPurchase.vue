@@ -19,13 +19,13 @@
           </div>
           <div class="info-content">
             <h4>예매 전 반드시 확인해 주세요!</h4>
-            <ul>
-              <li> - 경기 일반예매는 경기일 7일 전 13시에 오픈됩니다. (※GS MMS: 경기일 7일 전 13시)</li>
-              <li> - 경기 선예매는 혜택이 포함된 멤버십 상품 구매 회원에 한해 제공되며, 해당 계정에 자동으로 선예매 권한이 부여되어 선예매 기간 내 예매 페이지 접속이 가능합니다.</li>
-              <li> - PC에서 티켓 예매가 가능합니다.</li>
-              <li> - 1인 최대 4매 예매 가능합니다.</li>
-            </ul>
-            <p>&nbsp; ※ 반드시 [TICKET] - [티켓안내] 내 안내사항을 확인하신 후 예매를 진행하시기 바랍니다.
+            <div class="info-content-text">
+              <li>- 경기 일반 예매는 경기일 7일 전 13시에 오픈됩니다. (※ GS MMS: 경기일 7일 전 13시)</li>
+              <li>- 경기 선예매는 혜택이 포함된 멤버십 상품 구매 회원에 한해 제공되며, 해당 계정에 자동으로 선예매 권한이 부여되어 선예매 기간 내 예매 페이지 접속이 가능합니다.</li>
+              <li>- PC에서 티켓 예매가 가능합니다.</li>
+              <li>- 1인 최대 4매 예매 가능합니다.</li>
+            </div>
+            <p>&nbsp; ※ 반드시 [TICKET] - [티켓 안내] 내 안내사항을 확인하신 후 예매를 진행하시기 바랍니다.
             </p>
           </div>
         </div>
@@ -376,7 +376,7 @@ export default {
   /* 표 전체 너비 설정 */
   border-collapse: collapse;
   /* 경계선 합치기 */
-  font-size: 20px;
+  font-size: 18px;
   /* 폰트 크기 설정 */
   background-color: #f9f9f9;
   /* 표의 배경색 설정 */
@@ -419,7 +419,8 @@ th {
   border: none;
   color: white;
   /* 글자 색 (흰색) */
-  padding: 8px 16px;
+  /* padding: 8px 16px; */
+  padding: 10px 20px;
   /* 버튼 내부 여백 (위아래 12px, 좌우 24px) */
   text-align: center;
   /* 글자 가운데 정렬 */
@@ -427,7 +428,7 @@ th {
   /* 밑줄 없음 */
   display: inline-block;
   /* 기본 인라인 블록 설정 */
-  font-size: 22px;
+  font-size: 16px;
   /* 글자 크기 */
   border-radius: 8px;
   /* 모서리를 둥글게 */
@@ -436,9 +437,9 @@ th {
   transition: background-color 0.3s;
   /* 배경색이 바뀌는 효과 추가 */
   margin: 15px;
-  width: 140px;
+  /* width: 140px; */
   /* 버튼의 너비 */
-  height: 50px;
+  /* height: 50px; */
   /* 버튼의 높이 */
 }
 
@@ -464,17 +465,13 @@ th {
   width: 100%;
   max-width: 1000px; /* 최대 너비 설정으로 반응형 지원 */
   justify-content: center;
-}
-
-.icon {
-  margin-right: 20px;
-  /* 아이콘과 텍스트 사이의 간격 */
+  gap: 20px;
 }
 
 .icon img {
-  width: 120px;
+  width: 100px;
   /* 아이콘 크기 */
-  height: 120px;
+  height: 100px;
   /* 아이콘 크기 */
 }
 
@@ -487,8 +484,6 @@ th {
   /* 일반 문단 글자 크기 */
   list-style-type: disc;
   /* 목록 스타일 */
-  padding-left: 20px;
-  /* 목록 왼쪽 여백 */
 }
 
 .info-content p {
@@ -496,8 +491,14 @@ th {
   /* 일반 문단 글자 크기 */
   color: #1a1a1a;
   /* 부드러운 색상 */
-  margin-top: 10px;
+  margin-top: 13px;
   /* 위쪽 여백 */
+}
+
+.info-content-text {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
 }
 
 .ticket-purchase-page {
@@ -512,13 +513,13 @@ th {
   align-items: center;
   margin: 10px 10px;
   margin-bottom: 50px;
-  font-size: 20px;
+  font-size: 16px;
 }
 .page-btn {
   padding: 10px 15px;
   margin: 10px 15px;
   border: none;
-  font-size: 20px;
+  font-size: 16px;
 
 }
 </style>

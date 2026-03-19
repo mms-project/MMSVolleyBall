@@ -221,7 +221,7 @@ export default {
 
 /* 멤버십 구매 */
 .sub-title {
-font-size: 20px;
+font-size: 22px;
 font-weight: 700;
 }
 .membership-purchase-box{
@@ -257,6 +257,13 @@ font-weight: 700;
 }
 .membership-selection p {
 font-size: 18px;
+}
+
+.select-form {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .membership-purchase-content {

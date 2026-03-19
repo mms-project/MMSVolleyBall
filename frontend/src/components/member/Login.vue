@@ -13,7 +13,7 @@
                  </div>
                  <div class="form-group">
                      <label for="userPassword">비밀번호</label>
-                     <input type="Password" id="userPassword" v-model="userPassword" required placeholder="비밀번호를 입력해주세요" />
+                     <input type="Password" id="userPassword" v-model="userPassword" required placeholder="비밀번호를 입력해 주세요" />
                  </div>
                  <button type="submit" class="submit-button">로그인</button>
              </form>
@@ -150,7 +150,7 @@
      border: none; 
      border-radius: 5px; 
      cursor: pointer; 
-     font-size: 25px; 
+     font-size: 18px; 
  }
  
  .submit-button:hover {
@@ -159,6 +159,7 @@
  
  .links {
      margin-top: 30px; 
+     margin-bottom: 10px;
  }
  
  .links a {
