@@ -73,7 +73,7 @@
 ### 사용자 페이지
 
 <details>
-  <summary><b>구단 소개</b></summary>
+  <summary>구단 소개</summary>
   <br>
   <img src="./images/user_intro.png" alt="user_intro" />
 </details>
@@ -81,7 +81,7 @@
 <br>
 
 <details>
-  <summary><b>경기 일정 및 결과 조회</b></summary>
+  <summary>경기 일정 및 결과 조회</summary>
   <br>
   <img src="./images/user_match_schedule_result.png" alt="user_match_schedule_result" />
 </details>
@@ -89,7 +89,7 @@
 <br>
 
 <details>
-  <summary><b>티켓 안내 및 구매</b></summary>
+  <summary>티켓 안내 및 구매</summary>
   <br>
   <img src="./images/user_ticket_info_purchase.png" alt="user_ticket_info_purchase" />
 </details>
@@ -97,7 +97,7 @@
 <br>
 
 <details>
-  <summary><b>충전 및 티켓 구매 모달</b></summary>
+  <summary>충전 및 티켓 구매 모달</summary>
   <br>
   <img src="./images/user_ticket_modal.png" alt="user_ticket_modal" />
 </details>
@@ -105,7 +105,7 @@
 <br>
 
 <details>
-  <summary><b>멤버십 안내 및 구매</b></summary>
+  <summary>멤버십 안내 및 구매</summary>
   <br>
   <img src="./images/user_membership.png" alt="user_membership" />
 </details>
@@ -115,7 +115,7 @@
 ### 관리자 페이지
 
 <details>
-  <summary><b>회원 및 관리자 계정 관리</b></summary>
+  <summary>회원 및 관리자 계정 관리</summary>
   <br>
   <img src="./images/admin_user_management.png" alt="admin_user_management" />
 </details>
@@ -123,7 +123,7 @@
 <br>
 
 <details>
-  <summary><b>매출 조회</b></summary>
+  <summary>매출 조회</summary>
   <br>
   <img src="./images/admin_sales.png" alt="admin_sales" />
 </details>
@@ -131,7 +131,7 @@
 <br>
 
 <details>
-  <summary><b>경기 관리 및 메일 발송</b></summary>
+  <summary>경기 관리 및 메일 발송</summary>
   <br>
   <img src="./images/admin_match_management_mail.png" alt="admin_match_management_mail" />
 </details>
@@ -139,7 +139,7 @@
 <br>
 
 <details>
-  <summary><b>메일 발송 결과</b></summary>
+  <summary>메일 발송 결과</summary>
   <br>
   <img src="./images/admin_mail_result.png" alt="admin_mail_result" />
 </details>
